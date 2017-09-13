@@ -13,7 +13,7 @@ class RouterCacheServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 
     /**
@@ -23,6 +23,10 @@ class RouterCacheServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        app('router')->middlewareGroup('router.cache', []);
+
+        if (false === config('app.debug')) {
+            app('router')->setRoutes(new RouteCollection());
+        }
     }
 }
