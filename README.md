@@ -13,7 +13,7 @@ composer require lilocon/laravel-router-cache
 注册 `ServiceProvider`(5.5+ 版本不需要手动注册):
 
 ```php
-\Lilocon\RouterCache\RouterCacheServiceProvider,
+\Lilocon\RouterCache\RouterCacheServiceProvider::class,
 ```
 
 ## 使用
